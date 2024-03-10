@@ -1,5 +1,6 @@
 <script>
   import Scroller from "@sveltejs/svelte-scroller";
+  import Map from "./Map.svelte";
 
   let count, index, offset, progress;
 </script>
@@ -49,6 +50,7 @@
   bind:progress
 >
   <div class="background" slot="background">
+    <Map />
 
     <div class="progress-bars">
       <p>current section: <strong>{index + 1}/{count}</strong></p>
