@@ -1,18 +1,16 @@
 <script>
-  import Graph from "./Graph.svelte";
+
 </script>
-<section class="container">
-  <svelte:component this={Graph}/></section>
+
+<svg class="graph">
+
+</svg>
+
 <style>
-  section {
-      width: 400px
-  }
-
-
-  .container {
-  max-width: 1000px;
-  border: solid 0px black;
-  margin: auto;
-  }
-
-</style>
+    .graph {
+      width: 100%;
+      height: 100vh; /* check problem when setting width */
+      position: absolute;
+      outline: red solid 7px;
+    }
+  </style>
