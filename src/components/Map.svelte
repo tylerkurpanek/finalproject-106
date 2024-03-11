@@ -120,15 +120,26 @@
         .attr('fill', 'none')
         .attr('stroke', 'black')
 
-    g.append("arc")
-        .innerRadius(0)
-        .outerRadius(100)
-        .startAngle(0)
-        .endAngle(Math.PI / 2)
-        .attr('x', 600)
-        .attr('y', 40)
+    //g.append("arc")
+    //    .innerRadius(0)
+    //    .outerRadius(100)
+    //    .startAngle(0)
+    //    .endAngle(Math.PI / 2)
+    //    .attr('x', 600)
+    //    .attr('y', 40)
 
-
+    const arc = d3.arc()
+        .innerRadius(237.5) // Adjust as needed
+        .outerRadius(237.5) // Adjust as needed
+        .startAngle((-Math.PI/2) - (Math.PI / 8.2))
+        .endAngle((-3*Math.PI/2) + (Math.PI / 8.2));
+      
+      g.append("path")
+        .attr("d", arc)
+        .attr('stroke-width', 2)
+        .attr("transform", "translate(850,92)")
+        .attr("fill", "none")
+        .attr("stroke", "black");
 
 
     });
