@@ -3,6 +3,13 @@
   import Map from "./Map.svelte";
 
   let count, index, offset, progress;
+  let showMap = false;
+
+  $: {
+    // Update map visibility based on the index
+    showMap = index === 2; // 0-based index, so section 3 corresponds to index 2
+  }
+
 </script>
 
 <style>
@@ -10,7 +17,7 @@
     width: 100%;
     height: 100vh;
     position: relative;
-    outline: green solid 3px;
+    outline: none;
   }
 
   .foreground {
@@ -18,7 +25,7 @@
     margin: 0 auto;
     height: auto;
     position: relative;
-    outline: red solid 3px;
+    outline: none
   }
 
   .progress-bars {
@@ -31,7 +38,7 @@
     height: 80vh;
     background-color: rgba(0, 0, 0, 0.2); /* 20% opaque */
     /* color: white; */
-    outline: magenta solid 3px;
+    outline: none;
     text-align: center;
     max-width: 750px; /* adjust at will */
     color: black;
@@ -48,9 +55,12 @@
   bind:index
   bind:offset
   bind:progress
+
 >
   <div class="background" slot="background">
-    <Map {index}/>
+    {#if showMap}
+      <Map />
+    {/if}
 
     <div class="progress-bars">
       <p>current section: <strong>{index + 1}/{count}</strong></p>
@@ -65,8 +75,8 @@
   </div>
 
   <div class="foreground" slot="foreground">
-    <section>This is the first section.</section>
-    <section>This is the second section.</section>
-    <section>This is the third section.</section>
+    <section></section>
+    <section></section>
+    <section></section>
   </div>
 </Scroller>

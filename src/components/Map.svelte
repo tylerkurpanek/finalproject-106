@@ -5,7 +5,7 @@
   
     let svg;
     let container;
-    let index
+    
   
     onMount(() => {
       const margin = { top: 20, right: 20, bottom: 20, left: 20 };
@@ -150,31 +150,20 @@
 
     });
     
-    let isVisible = false;
 
-    $: if (index === 2) {
-    isVisible = true;
-    } else {
-    isVisible = false;
-    }
   </script>
-  <div class="g"class:visible={isVisible} bind:this={container} />
+  <div class="g" bind:this={container} />
 
   <style>
     .g {
       width: 100%;
       height: 100vh; /* check problem when setting width */
       position: absolute;
-      opacity: 0;
-      visibility: hidden;
       transition: opacity 2s, visibility 2s;
       outline: blue solid 3px;
     }
   
-    .g.visible.visible {
-      opacity: 1;
-      visibility: visible;
-    }
+    
   </style>
   
   <svg bind:this={svg}></svg>
