@@ -36,7 +36,7 @@
 
   section {
     height: 80vh;
-    background-color: rgba(0, 0, 0, 0.2); /* 20% opaque */
+    background-color: rgba(0, 0, 0, 0); /* 20% opaque */
     /* color: white; */
     outline: none;
     text-align: center;
@@ -75,7 +75,7 @@
   </div>
 
   <div class="foreground" slot="foreground">
-    <section></section>
+    <section>Lebron shooting throughout his career</section>
     <section></section>
     <section></section>
   </div>
