@@ -6,9 +6,9 @@
     let svg;
     let container;
 
-    const resShot = await fetch('lebron_shots_with_year.csv');
-    const csvShot = await resLebron.text();
-    shotData = d3.csvParse(csvLebron, d3.autoType);
+    //const resShot = await fetch('lebron_shots_with_year.csv');
+    //const csvShot = await resLebron.text();
+    //shotData = d3.csvParse(csvLebron, d3.autoType);
     
   
     onMount(() => {
@@ -29,22 +29,30 @@
       console.log(width)
       //rim
       g.append("circle")
-        .attr("cx", 850) 
+        .attr("cx", width/2) 
         .attr("cy",92.5 ) 
         .attr("r", 7.5) 
         .attr('fill', 'none')
         .attr('stroke', 'black')
     //baseline
      g.append('rect')
-        .attr('x', 600)
+        .attr('x', (width/2)-250)
         .attr('y', 40)
-        .attr('width', 500)
+        .attr('width', 250)
+        .attr('height', 1)
+        .attr('fill', 'none')
+        .attr('stroke', 'black')
+
+      g.append('rect')
+        .attr('x', (width/2))
+        .attr('y', 40)
+        .attr('width', 250)
         .attr('height', 1)
         .attr('fill', 'none')
         .attr('stroke', 'black')
     //left sideline
     g.append('rect')
-        .attr('x', 1100)
+        .attr('x', (width/2) + 250)
         .attr('y', 40)
         .attr('width', 1)
         .attr('height',470 )
@@ -52,7 +60,7 @@
         .attr('stroke', 'black')
     //right sideline
     g.append('rect')
-        .attr('x', 600)
+        .attr('x', (width/2) - 250)
         .attr('y', 40)
         .attr('width', 1)
         .attr('height',470 )
@@ -60,7 +68,7 @@
         .attr('stroke', 'black')
     //halfcourt line 
     g.append('rect')
-        .attr('x', 600)
+        .attr('x', (width/2) - 250)
         .attr('y', 510)
         .attr('width', 500)
         .attr('height', 1)
@@ -69,7 +77,7 @@
 
     //backboard
     g.append('rect')
-        .attr('x', 820)
+        .attr('x', (width/2-30))
         .attr('y', 85)
         .attr('width', 60)
         .attr('height', 1)
@@ -78,7 +86,7 @@
 
     //freethrow
     g.append('rect')
-        .attr('x',  770)
+        .attr('x',  (width/2 - 80))
         .attr('y', 235)
         .attr('width', 160)
         .attr('height', 1)
@@ -87,7 +95,7 @@
     
     // arc around freethrwo line
     g.append("circle")
-        .attr("cx", 850) 
+        .attr("cx", width/2) 
         .attr("cy",235 ) 
         .attr("r", 60) 
         .attr('fill', 'none')
@@ -95,7 +103,7 @@
 
     //left side of inner paint
     g.append('rect')
-        .attr('x',  790)
+        .attr('x', (width/2) - 60)
         .attr('y', 40)
         .attr('width', 1)
         .attr('height', 195)
@@ -103,7 +111,7 @@
         .attr('stroke', 'black')
     //right side of inner paint
     g.append('rect')
-        .attr('x',  910)
+        .attr('x', (width/2) + 60)
         .attr('y', 40)
         .attr('width', 1)
         .attr('height', 195)
@@ -112,7 +120,7 @@
 
     //left side 3
     g.append('rect')
-        .attr('x', 630)
+        .attr('x', (width/2)-220)
         .attr('y', 40)
         .attr('width', 1)
         .attr('height', 140)
@@ -120,7 +128,7 @@
         .attr('stroke', 'black')
     //right side 3
     g.append('rect')
-        .attr('x', 1070)
+        .attr('x', (width/2)+220)
         .attr('y', 40)
         .attr('width', 1)
         .attr('height', 140)
@@ -144,14 +152,9 @@
       g.append("path")
         .attr("d", arc)
         .attr('stroke-width', 2)
-        .attr("transform", "translate(850,92)")
+        .attr("transform", `translate(${width / 2},92)`)
         .attr("fill", "none")
         .attr("stroke", "black");
-
-    
-    
-
-
     });
     
 
