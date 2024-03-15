@@ -5,6 +5,10 @@
   
     let svg;
     let container;
+
+    const resShot = await fetch('lebron_shots_with_year.csv');
+    const csvShot = await resLebron.text();
+    shotData = d3.csvParse(csvLebron, d3.autoType);
     
   
     onMount(() => {
