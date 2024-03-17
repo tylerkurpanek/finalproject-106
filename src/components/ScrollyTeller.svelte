@@ -207,10 +207,10 @@
   </div>
 
   <div class="foreground" slot="foreground">
-    <section>Lebron shooting throughout his career</section>
+    <section>Our visualization illustrates the distibution of LeBron James' shot attemps throughout his NBA career. James was drafted in 2003, and is still playing at an All-Star level today. Our demo video can be found <a href="https://youtu.be/S_qaT8NKhSE">here.</a> We chose James due to his longevity and skill. We believe that his shot choices reflect a broader trend in the NBA in which the 3-point shot has become much more common, and players are not taking as many midrange shots.</section>
     <img src= "static\lebron.jpeg" alt="Lebron James" />
     <section>
-      2003-04
+      2003-04: Rookie Season - 2,977 shots taken
       {#if index === 1 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData0304 as shot}
@@ -220,7 +220,7 @@
       {/if}
     </section>
     <section>
-      2004-05
+      2004-05: The heyday of "iso-ball" and the midrange jumshot - 3,367 shots taken
       {#if index === 2 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData0405 as shot}
@@ -230,7 +230,7 @@
       {/if}
     </section>
     <section>
-      2005-06
+      2005-06 - 4,241 shots taken
       {#if index === 3 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData0506 as shot}
@@ -240,7 +240,7 @@
       {/if}
     </section>
     <section>
-      2006-07
+      2006-07: First Playoffs Appearance - 4,017 shots taken
       {#if index === 4 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData0607 as shot}
@@ -250,7 +250,7 @@
       {/if}
     </section>
     <section>
-      2007-08
+      2007-08 - 3,829 shots taken
       {#if index === 5 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData0708 as shot}
@@ -260,7 +260,7 @@
       {/if}
     </section>
     <section>
-      2008-09
+      2008-09 - 3,829 shots taken
       {#if index === 6 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData0809 as shot}
@@ -270,7 +270,7 @@
       {/if}
     </section>
     <section>
-      2009-10
+      2009-10 - 3,463 shots taken
       {#if index === 7 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData0910 as shot}
@@ -280,7 +280,7 @@
       {/if}
     </section>
     <section>
-      2010-11
+      2010-11: First season in Miami - 3,703 shots taken
       {#if index === 8 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1011 as shot}
@@ -290,7 +290,7 @@
       {/if}
     </section>
     <section>
-      2011-12
+      2011-12 - 3,341 shots taken
       {#if index === 9 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1112 as shot}
@@ -300,7 +300,7 @@
       {/if}
     </section>
     <section>
-      2012-13
+      2012-13: The first season where LeBron's 3-point shot volume is noticeably higher - 3,569 shots taken
       {#if index === 10 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1213 as shot}
@@ -310,7 +310,7 @@
       {/if}
     </section>
     <section>
-      2013-14
+      2013-14: The "Steph Curry" effect begins sweeping the league, and 3-pointers start to be taken at a higher rate - 3,381 shots taken
       {#if index === 11 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1314 as shot}
@@ -320,7 +320,7 @@
       {/if}
     </section>
     <section>
-      2014-15
+      2014-15 - 3,639 shots taken
       {#if index === 12 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1415 as shot}
@@ -330,7 +330,7 @@
       {/if}
     </section>
     <section>
-      2015-16
+      2015-16 - 3,667 shots taken
       {#if index === 13 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1516 as shot}
@@ -340,7 +340,7 @@
       {/if}
     </section>
     <section>
-      2016-17
+      2016-17 - 3,455 shots taken
       {#if index === 14 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1617 as shot}
@@ -350,7 +350,7 @@
       {/if}
     </section>
     <section>
-      2017-18
+      2017-18 - 4,179 shots taken
       {#if index === 15 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1718 as shot}
@@ -360,7 +360,7 @@
       {/if}
     </section>
     <section>
-      2018-19
+      2018-19 - 2,191 shots taken
       {#if index === 16 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1819 as shot}
@@ -370,7 +370,7 @@
       {/if}
     </section>
     <section>
-      2019-20
+      2019-20 - 3,367 shots taken
       {#if index === 17 && offset >= 0.50 && offset <=0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1920 as shot}
@@ -380,7 +380,7 @@
       {/if}
     </section>
     <section>
-      2020-21
+      2020-21 - 1,907 shots taken
       {#if index === 18 && offset >= 0.50 && offset <= 0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData2021 as shot}
@@ -390,8 +390,7 @@
       {/if}
     </section>
     <section>
-      2021-22
-      
+      2021-22 - 2,343 shots taken
       {#if index === 19 && offset >= 0.50 && offset <=0.58}
       <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData2122 as shot}
