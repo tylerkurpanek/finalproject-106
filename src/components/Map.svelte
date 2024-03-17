@@ -24,6 +24,7 @@
       const margin = { top: 20, right: 20, bottom: 20, left: 20 };
       const width = window.innerWidth - margin.left - margin.right;
       const height = window.innerHeight - margin.top - margin.bottom;
+      
   
       const svgContainer = d3.select(svg)
         .attr("width", width)

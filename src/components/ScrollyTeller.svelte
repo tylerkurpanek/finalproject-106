@@ -8,6 +8,10 @@
   let count, index, offset, progress;
   let showMap = false;
   let shotsIndex = 0;
+  let screenWidth, screenHeight, onethirdScreenWidth, halfScreenHeight, adjustmentscreenwidth;
+
+
+
 
   
 
@@ -38,6 +42,19 @@
 
 
  onMount(async () => {
+      const margin = { top: 20, right: 20, bottom: 20, left: 20 };
+      const width = window.innerWidth - margin.left - margin.right;
+      const height = window.innerHeight - margin.top - margin.bottom;
+
+
+
+      screenWidth = width;
+      screenHeight = height;
+      onethirdScreenWidth = screenWidth * .28;
+      halfScreenHeight = screenHeight * .65;
+      adjustmentscreenwidth = screenWidth * .125;
+
+
   const res0304 = await fetch('lebron_shots_2003-04.csv');
   const csv0304 = await res0304.text();
   shotData0304 = d3.csvParse(csv0304, d3.autoType)
@@ -195,155 +212,194 @@
     <section>Lebron shooting throughout his career</section>
     <section>
       2003-04
-      <svg width=800 height=800>
+      {#if index === 1 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData0304 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2004-05
-      <svg width=800 height=800>
+      {#if index === 2 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData0405 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2005-06
-      <svg width=800 height=800>
+      {#if index === 3 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData0506 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2006-07
-      <svg width=800 height=800>
+      {#if index === 4 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData0607 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2007-08
-      <svg width=800 height=800>
+      {#if index === 5 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData0708 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2008-09
-      <svg width=800 height=800>
+      {#if index === 6 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData0809 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2009-10
-      <svg width=800 height=800>
+      {#if index === 7 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData0910 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2010-11
-      <svg width=800 height=800>
+      {#if index === 8 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1011 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2011-12
-      <svg width=800 height=800>
+      {#if index === 9 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1112 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2012-13
-      <svg width=800 height=800>
+      {#if index === 10 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1213 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2013-14
-      <svg width=800 height=800>
+      {#if index === 11 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1314 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2014-15
-      <svg width=800 height=800>
+      {#if index === 12 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1415 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2015-16
-      <svg width=800 height=800>
+      {#if index === 13 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1516 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2016-17
-      <svg width=800 height=800>
+      {#if index === 14 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1617 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2017-18
-      <svg width=800 height=800>
+      {#if index === 15 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1718 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2018-19
-      <svg width=800 height=800>
+      {#if index === 16 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1819 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2019-20
-      <svg width=800 height=800>
+      {#if index === 17 && offset >= 0.50 && offset <=0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData1920 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2020-21
-      <svg width=800 height=800>
+      {#if index === 18 && offset >= 0.50 && offset <= 0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData2021 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
     <section>
       2021-22
-      <svg width=800 height=800>
+      
+      {#if index === 19 && offset >= 0.50 && offset <=0.58}
+      <svg width={onethirdScreenWidth* 2} height={halfScreenHeight}>
         {#each shotData2122 as shot}
-          <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
+        <circle cx={shot.shotX*(onethirdScreenWidth / 800)*15 + (adjustmentscreenwidth)} cy={shot.shotY*(halfScreenHeight / 800)*15} r={3 * (onethirdScreenWidth / 800)}/>
         {/each}
       </svg>
+      {/if}
     </section>
   </div>
 </Scroller>
