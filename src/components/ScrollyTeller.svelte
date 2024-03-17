@@ -165,11 +165,6 @@
     outline: none
   }
 
-  .progress-bars {
-    position: absolute;
-    background: rgba(170, 51, 120, 0.2) /*  40% opaque */;
-    visibility: visible;
-  }
 
   section {
     height: 80vh;
@@ -208,7 +203,7 @@
 
   <div class="foreground" slot="foreground">
     <section>Our visualization illustrates the distibution of LeBron James' shot attemps throughout his NBA career. James was drafted in 2003, and is still playing at an All-Star level today. Our demo video can be found <a href="https://youtu.be/S_qaT8NKhSE">here.</a> We chose James due to his longevity and skill. We believe that his shot choices reflect a broader trend in the NBA in which the 3-point shot has become much more common, and players are not taking as many midrange shots.</section>
-    <img src= "static\lebron.jpeg" alt="Lebron James" />
+    <img src= "lebron.jpeg" width="800" height="500" alt="Lebron James" />
     <section>
       2003-04: Rookie Season - 2,977 shots taken
       {#if index === 1 && offset >= 0.50 && offset <= 0.58}
@@ -398,6 +393,10 @@
         {/each}
       </svg>
       {/if}
+    </section>
+
+    <section>
+      In conclusion, LeBron's shot selection
     </section>
     <section>
       Thanks for Watching!
