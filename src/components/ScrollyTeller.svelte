@@ -1,7 +1,7 @@
 <script>
   import Scroller from "@sveltejs/svelte-scroller";
   import Map from "./Map.svelte";
-  import Shots from "./shots.svelte";
+  //import Shots from "./shots.svelte";
   import { onMount } from 'svelte';
   import * as d3 from 'd3';
 
@@ -194,8 +194,6 @@
 <div class="background" slot="background">
   {#if showMap}
     <Map/>
-  {:else}
-    <Shots /> 
   {/if}
 
 
