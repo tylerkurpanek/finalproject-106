@@ -5,6 +5,7 @@
   
     let svg;
     let container;
+    let shotData;
 
     //const resShot = await fetch('lebron_shots_with_year.csv');
     //const csvShot = await resLebron.text();
@@ -12,6 +13,15 @@
     
   
     onMount(() => {
+
+      async() => {
+        shotData = d3.csv("lebron_shots_with_year.csv")
+      }
+      
+      //const resShot = await fetch('lebron_shots_with_year.csv');
+      //const csvShot = await resLebron.text();
+      //shotData = d3.csvParse(csvLebron, d3.autoType);
+
       const margin = { top: 20, right: 20, bottom: 20, left: 20 };
       const width = window.innerWidth - margin.left - margin.right;
       const height = window.innerHeight - margin.top - margin.bottom;
@@ -31,6 +41,8 @@
 .append("g")
   .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
+
+$: console.log(shotData)
 
 // Labels of row and columns
 var myGroups = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]

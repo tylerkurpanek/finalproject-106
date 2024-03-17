@@ -1,6 +1,8 @@
 <script>
     import { onMount } from 'svelte';
     import * as d3 from 'd3';
+    //export let index;
+    let shotData;
   
   
     let svg;
@@ -12,6 +14,13 @@
     
   
     onMount(() => {
+      //async() => {
+      //  shotData = await d3.csv("lebron_shots_with_year.csv")
+      //}
+      //const resShot = await fetch('lebron_shots_with_year.csv');
+      //const csvShot = await resLebron.text();
+      //shotData = d3.csvParse(csvLebron, d3.autoType);
+
       const margin = { top: 20, right: 20, bottom: 20, left: 20 };
       const width = window.innerWidth - margin.left - margin.right;
       const height = window.innerHeight - margin.top - margin.bottom;
@@ -156,11 +165,24 @@
         .attr("fill", "none")
         .attr("stroke", "black");
 
+    //let dataToShow;
 
+    //$: if (index == 1) {
+    //  dataToShow = shotData.filter(shotData.Year === 2003);
+    //}
   });
+
+  //const filter_shots0304 = (feature) => {
+  //  return (
+  //    feature.properties.Year === 2003
+  //  );
+  //};
+
+  //const shots0304 = shotData.filter(filter_shots0304);
     
 
   </script>
+
   <div class="g" bind:this={container} />
 
   <style>
