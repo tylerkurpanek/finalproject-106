@@ -45,14 +45,25 @@
       const margin = { top: 20, right: 20, bottom: 20, left: 20 };
       const width = window.innerWidth - margin.left - margin.right;
       const height = window.innerHeight - margin.top - margin.bottom;
+      console.log(width)
+
+    
 
 
-
+      
       screenWidth = width;
       screenHeight = height;
       onethirdScreenWidth = screenWidth * .28;
       halfScreenHeight = screenHeight * .65;
       adjustmentscreenwidth = screenWidth * .125;
+
+      if (screenWidth < 1500) {
+        onethirdScreenWidth *= 1.4;
+        adjustmentscreenwidth *= .58
+        halfScreenHeight *= 1.4
+      }
+
+
 
 
   const res0304 = await fetch('lebron_shots_2003-04.csv');
@@ -173,11 +184,7 @@
   }
 </style>
 
-<svg width=800 height=800>
-  {#each shotData0304 as shot}
-    <circle cx={shot.shotX*15} cy={shot.shotY*15} r=3/>
-  {/each}
-</svg>
+
 
 <Scroller
   top={0.0}
@@ -196,20 +203,12 @@
     <Shots /> 
   {/if}
 
-    <div class="progress-bars">
-      <p>current section: <strong>{index + 1}/{count}</strong></p>
-      <progress value={count ? (index + 1) / count : 0} />
 
-      <p>offset in current section</p>
-      <progress value={offset || 0} />
-
-      <p>total progress</p>
-      <progress value={progress || 0} />
-    </div>
   </div>
 
   <div class="foreground" slot="foreground">
     <section>Lebron shooting throughout his career</section>
+    <img src= "static\lebron.jpeg" alt="Lebron James" />
     <section>
       2003-04
       {#if index === 1 && offset >= 0.50 && offset <= 0.58}
@@ -400,6 +399,9 @@
         {/each}
       </svg>
       {/if}
+    </section>
+    <section>
+      Thanks for Watching!
     </section>
   </div>
 </Scroller>
