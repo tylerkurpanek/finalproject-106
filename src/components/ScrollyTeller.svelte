@@ -17,7 +17,7 @@
 
   $: {
     // Update map visibility based on the index
-    showMap = index >= 1; // 0-based index, so section 3 corresponds to index 2
+    showMap = index >= 1  && offset >= 0.50 && offset <= 0.58; // 0-based index, so section 3 corresponds to index 2
   }
 
  let shotData0304 = [];
